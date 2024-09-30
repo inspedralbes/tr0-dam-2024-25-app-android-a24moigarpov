@@ -1,0 +1,277 @@
+{
+    "preguntes": [
+      {
+        "id": 1,
+        "pregunta": "Quina marca de cotxes utilitza el lema 'Ultimate Driving Machine'?",
+        "respostes": [
+          {
+            "id": 1,
+            "resposta": "Mercedes-Benz",
+            "correcta": false
+          },
+          {
+            "id": 2,
+            "resposta": "BMW",
+            "correcta": true
+          },
+          {
+            "id": 3,
+            "resposta": "Audi",
+            "correcta": false
+          },
+          {
+            "id": 4,
+            "resposta": "Lexus",
+            "correcta": false
+          }
+        ],
+        "imatge": "https://img.freepik.com/foto-gratis/fila-coches-nuevos-puerto_335224-805.jpg"
+      } ,
+      {
+        "id": 2,
+        "pregunta": "Quina marca de roba està representada pel logotip d'un cocodril?",
+        "respostes": [
+          {
+            "id": 1,
+            "resposta": "Puma",
+            "correcta": false
+          },
+          {
+            "id": 2,
+            "resposta": "Nike",
+            "correcta": false
+          },
+          {
+            "id": 3,
+            "resposta": "Adidas",
+            "correcta": false
+          },
+          {
+            "id": 4,
+            "resposta": "Lacoste",
+            "correcta": true
+          }
+        ],
+        "imatge": "https://img.freepik.com/foto-gratis/tienda-ropa-tienda-ropa-perchas-tienda-boutique-moderna_1150-8886.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1727136000&semt=ais_hybrid"
+      },
+      {
+        "id": 3,
+        "pregunta": "Quina marca de tecnologia fabrica l'iPhone?",
+        "respostes": [
+          {
+            "id": 1,
+            "resposta": "Huawei",
+            "correcta": false
+          },
+          {
+            "id": 2,
+            "resposta": "Xiaomi",
+            "correcta": false
+          },
+          {
+            "id": 3,
+            "resposta": "Apple",
+            "correcta": true
+          },
+          {
+            "id": 4,
+            "resposta": "Samsung",
+            "correcta": false
+          }
+        ],
+        "imatge": "https://imagenes.20minutos.es/files/image_990_556/uploads/imagenes/2024/01/23/muchos-moviles.jpeg"
+      },
+      {
+        "id": 4,
+        "pregunta": "Quina marca de menjar ràpid té un logotip amb arcs daurats?",
+        "respostes": [
+          {
+            "id": 1,
+            "resposta": "Wendy's",
+            "correcta": false
+          },
+          {
+            "id": 2,
+            "resposta": "KFC",
+            "correcta": false
+          },
+          {
+            "id": 3,
+            "resposta": "McDonald's",
+            "correcta": true
+          },
+          {
+            "id": 4,
+            "resposta": "Burger King",
+            "correcta": false
+          }
+        ],
+        "imatge": "https://img.freepik.com/foto-gratis/primer-plano-deliciosa-comida-hamburguesa_23-2151434076.jpg"
+      },
+      {
+        "id": 5,
+        "pregunta": "Quina marca de refrescos té un logotip vermell amb una onada blanca?",
+        "respostes": [
+          {
+            "id": 1,
+            "resposta": "Coca-Cola",
+            "correcta": true
+          },
+          {
+            "id": 2,
+            "resposta": "Pepsi",
+            "correcta": false
+          },
+          {
+            "id": 3,
+            "resposta": "Sprite",
+            "correcta": false
+          },
+          {
+            "id": 4,
+            "resposta": "Fanta",
+            "correcta": false
+          }
+        ],
+        "imatge": "https://cdn.static.aptavs.com/imagenes/que-entendemos-por-refresco_905x603.jpg"
+      },
+      {
+        "id": 6,
+        "pregunta": "Quina marca de calçat és famosa pel seu eslògan 'Just Do It'?",
+        "respostes": [
+          {
+            "id": 1,
+            "resposta": "Adidas",
+            "correcta": false
+          },
+          {
+            "id": 2,
+            "resposta": "Puma",
+            "correcta": false
+          },
+          {
+            "id": 3,
+            "resposta": "Nike",
+            "correcta": true
+          },
+          {
+            "id": 4,
+            "resposta": "Reebok",
+            "correcta": false
+          }
+        ],
+        "imatge": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp1XwE4w8NO-elmryVbhXWRg-2I52BNFL-YQ&s"
+      },
+      {
+        "id": 7,
+        "pregunta": "Quina marca de videojocs té com a mascota un eriçó blau?",
+        "respostes": [
+          {
+            "id": 1,
+            "resposta": "Nintendo",
+            "correcta": false
+          },
+          {
+            "id": 2,
+            "resposta": "Sega",
+            "correcta": true
+          },
+          {
+            "id": 3,
+            "resposta": "Sony",
+            "correcta": false
+          },
+          {
+            "id": 4,
+            "resposta": "Atari",
+            "correcta": false
+          }
+        ],
+        "imatge": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9uoeIlmtzAjkrTZwQG0BslGLK_XDhW9S6Hw&s"
+      },
+      {
+        "id": 8,
+        "pregunta": "Quina marca de càmeres és coneguda pel model EOS?",
+        "respostes": [
+          {
+            "id": 1,
+            "resposta": "Canon",
+            "correcta": true
+          },
+          {
+            "id": 2,
+            "resposta": "Nikon",
+            "correcta": false
+          },
+          {
+            "id": 3,
+            "resposta": "Sony",
+            "correcta": false
+          },
+          {
+            "id": 4,
+            "resposta": "Olympus",
+            "correcta": false
+          }
+        ],
+        "imatge": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7tMx4bFgOSvoO8elLU7pdb8_Y_uiQjMvSZA&s"
+      },
+      {
+        "id": 9,
+        "pregunta": "Quina marca de rellotges té una corona com a logotip?",
+        "respostes": [
+          {
+            "id": 1,
+            "resposta": "Omega",
+            "correcta": false
+          },
+          {
+            "id": 2,
+            "resposta": "Rolex",
+            "correcta": true
+          },
+          {
+            "id": 3,
+            "resposta": "Tag Heuer",
+            "correcta": false
+          },
+          {
+            "id": 4,
+            "resposta": "Seiko",
+            "correcta": false
+          }
+        ],
+        "imatge": "https://st4.depositphotos.com/13324256/24136/i/450/depositphotos_241366582-stock-photo-selective-focus-elegant-wristwatches-lying.jpg"
+      },
+      {
+        "id": 10,
+        "pregunta": "Quina marca de xocolata té com a símbol una vaca lila?",
+        "respostes": [
+          {
+            "id": 1,
+            "resposta": "Nestlé",
+            "correcta": false
+          },
+          {
+            "id": 2,
+            "resposta": "Lindt",
+            "correcta": false
+          },
+          {
+            "id": 3,
+            "resposta": "Milka",
+            "correcta": true
+          },
+          {
+            "id": 4,
+            "resposta": "Ferrero",
+            "correcta": false
+          }
+        ],
+        "imatge": "https://img.freepik.com/foto-gratis/arreglo-plano-deliciosas-tabletas-chocolate_23-2149349242.jpg"
+      }
+     
+    ]
+    
+  }
+  
