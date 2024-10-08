@@ -1,4 +1,4 @@
-package com.example.juegoandorid.ui.theme
+package com.example.juegoandroid.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

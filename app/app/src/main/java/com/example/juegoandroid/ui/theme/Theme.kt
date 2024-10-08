@@ -1,6 +1,5 @@
-package com.example.juegoandorid.ui.theme
+package com.example.juegoandroid.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
