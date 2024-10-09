@@ -60,10 +60,9 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation("com.google.android.material:material:1.6.0")
     implementation("com.squareup.picasso:picasso:2.71828")
-    implementation("com.squareup.retrofit2:retrofit:2.9.0") // Agregar Retrofit
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0") // Agregar Convertidor JSON
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation(libs.androidx.appcompat)
-
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
