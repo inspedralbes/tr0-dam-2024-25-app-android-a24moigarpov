@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.juegoandorid"
+    namespace = "com.example.juegoandroid"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.juegoandorid"
+        applicationId = "com.example.juegoandroid"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -50,7 +50,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -59,6 +58,12 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation("com.google.android.material:material:1.6.0")
+    implementation("com.squareup.picasso:picasso:2.71828")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0") // Agregar Retrofit
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0") // Agregar Convertidor JSON
+    implementation(libs.androidx.appcompat)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
