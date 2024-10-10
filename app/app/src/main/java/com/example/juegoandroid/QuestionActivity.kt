@@ -70,6 +70,7 @@ class QuestionActivity : AppCompatActivity() {
         finish()
     }
 
+
     private fun fetchPreguntas(onResult: (List<Pregunta>) -> Unit) {
         // Realizar la llamada a la API para obtener las preguntas
         RetrofitClient.instance.getPreguntas().enqueue(object : Callback<List<Pregunta>> {
