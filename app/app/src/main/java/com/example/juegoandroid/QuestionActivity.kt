@@ -2,6 +2,7 @@ package com.example.juegoandroid
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -38,19 +39,31 @@ class QuestionActivity : AppCompatActivity() {
     }
 
     private fun fetchPreguntas(onResult: (List<Pregunta>) -> Unit) {
+        // Realizar la llamada a la API para obtener las preguntas
         RetrofitClient.instance.getPreguntas().enqueue(object : Callback<List<Pregunta>> {
             override fun onResponse(call: Call<List<Pregunta>>, response: Response<List<Pregunta>>) {
+                // Imprimir el código de respuesta para depuración
+                Log.d("Response Code", response.code().toString())
+
+                // Verificar si la respuesta es exitosa
                 if (response.isSuccessful) {
-                    // Cambiar el acceso a la lista de preguntas
                     val fetchedPreguntas = response.body() ?: emptyList()
-                    onResult(fetchedPreguntas)
+                    if (fetchedPreguntas.isNotEmpty()) {
+                        Log.d("JSON Response", fetchedPreguntas.toString())  // Log de preguntas obtenidas
+                        onResult(fetchedPreguntas)  // Pasar las preguntas a la actividad
+                    } else {
+                        Toast.makeText(this@QuestionActivity, "No se encontraron preguntas", Toast.LENGTH_SHORT).show()
+                    }
                 } else {
+                    // Log de error si la respuesta no es exitosa
+                    Log.e("Response Error", response.errorBody()?.string() ?: "Error desconocido")
                     Toast.makeText(this@QuestionActivity, "Error al cargar preguntas", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onFailure(call: Call<List<Pregunta>>, t: Throwable) {
                 Toast.makeText(this@QuestionActivity, "Fallo de conexión", Toast.LENGTH_SHORT).show()
+                Log.e("Retrofit Error", t.message.toString())  // Log del error de conexión
             }
         })
     }
