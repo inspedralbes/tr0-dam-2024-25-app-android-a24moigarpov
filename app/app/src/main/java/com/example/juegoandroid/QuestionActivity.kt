@@ -63,8 +63,9 @@ class QuestionActivity : AppCompatActivity() {
     private fun navigateToResults() {
         // Navegar a la pantalla de resultados
         val intent = Intent(this, ResultActivity::class.java)
-        intent.putExtra("EXTRA_SCORE", correctAnswers) // Puntuación correcta
-        intent.putExtra("EXTRA_TIME", timeElapsed) // Tiempo total
+        intent.putExtra("EXTRA_SCORE", correctAnswers) // Asegúrate de que la clave coincida
+        intent.putExtra("totalQuestions", preguntas.size) // Asegúrate de que esto contenga el total de preguntas
+        intent.putExtra("EXTRA_TIME", timeElapsed) // Pasar el tiempo total
         startActivity(intent)
         finish()
     }
