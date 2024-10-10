@@ -16,4 +16,5 @@ object RetrofitClient {
         retrofit.create(PreguntaService::class.java)
 
     }
+
 }
