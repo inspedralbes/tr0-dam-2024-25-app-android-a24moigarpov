@@ -1,30 +1,35 @@
 package com.example.juegoandroid
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.juegoandroid.R
 
 class ResultActivity : AppCompatActivity() {
+    private lateinit var resultText: TextView
+    private lateinit var timeText: TextView // Nueva variable para el TextView del tiempo
+    private lateinit var restartButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
-        val correctAnswers = intent.getIntExtra("correctAnswers", 0)
-        val totalQuestions = intent.getIntExtra("totalQuestions", 11)
+        resultText = findViewById(R.id.resultText)
+        timeText = findViewById(R.id.timeText) // Referenciar el nuevo TextView
+        restartButton = findViewById(R.id.restartButton)
 
-        val resultText = findViewById<TextView>(R.id.resultText)
+        // Obtener datos del Intent
+        val correctAnswers = intent.getIntExtra("EXTRA_SCORE", 0) // Cambiado a EXTRA_SCORE
+        val totalQuestions = intent.getIntExtra("totalQuestions", 0) // Usar la clave correcta
+        val timeElapsed = intent.getLongExtra("EXTRA_TIME", 0) // Obtener el tiempo como Long
+
+        // Establecer texto en los TextViews
         resultText.text = "Has acertado $correctAnswers de $totalQuestions preguntas"
+        timeText.text = "Tiempo: $timeElapsed s" // Mostrar el tiempo
 
-        val restartButton = findViewById<Button>(R.id.restartButton)
+        // Configurar el botón para reiniciar el juego
         restartButton.setOnClickListener {
-            // Reiniciar el juego
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
+            finish() // Cierra la actividad actual para volver a la anterior
         }
     }
 }

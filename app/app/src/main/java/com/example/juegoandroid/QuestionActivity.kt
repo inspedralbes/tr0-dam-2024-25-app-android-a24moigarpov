@@ -2,6 +2,7 @@ package com.example.juegoandroid
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
@@ -19,10 +20,16 @@ class QuestionActivity : AppCompatActivity() {
     private var currentQuestionIndex = 0
     private var correctAnswers = 0
     private lateinit var preguntas: List<Pregunta>
+    private lateinit var timerText: TextView
+    private var timer: CountDownTimer? = null
+    private var timeElapsed: Long = 0 // Variable para almacenar el tiempo transcurrido
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question)
+
+        timerText = findViewById(R.id.timerText) // Inicializa el TextView del temporizador
+        startTimer() // Inicia el temporizador
 
         val questionText = findViewById<TextView>(R.id.questionText)
         val questionImage = findViewById<ImageView>(R.id.questionImage)
@@ -36,6 +43,30 @@ class QuestionActivity : AppCompatActivity() {
             preguntas = preguntasList
             loadQuestion(questionText, questionImage, answer1, answer2, answer3, answer4)
         }
+    }
+
+    private fun startTimer() {
+        // Configura el temporizador para contar hasta que el usuario termine el test
+        timer = object : CountDownTimer(Long.MAX_VALUE, 1000) { // Usar Long.MAX_VALUE para que nunca se acabe automáticamente
+            override fun onTick(millisUntilFinished: Long) {
+                timeElapsed += 1 // Incrementa el tiempo transcurrido en segundos
+                timerText.text = "Tiempo: $timeElapsed s" // Actualiza el TextView
+            }
+
+            override fun onFinish() {
+                // Este método no se usará, pero debemos implementarlo
+                // porque la clase es abstracta.
+            }
+        }.start()
+    }
+
+    private fun navigateToResults() {
+        // Navegar a la pantalla de resultados
+        val intent = Intent(this, ResultActivity::class.java)
+        intent.putExtra("EXTRA_SCORE", correctAnswers) // Puntuación correcta
+        intent.putExtra("EXTRA_TIME", timeElapsed) // Tiempo total
+        startActivity(intent)
+        finish()
     }
 
     private fun fetchPreguntas(onResult: (List<Pregunta>) -> Unit) {
@@ -94,11 +125,7 @@ class QuestionActivity : AppCompatActivity() {
             answer4.setOnClickListener { checkAnswer(3) }
         } else {
             // Navegar a la pantalla de resultados
-            val intent = Intent(this, ResultActivity::class.java)
-            intent.putExtra("correctAnswers", correctAnswers)
-            intent.putExtra("totalQuestions", preguntas.size)
-            startActivity(intent)
-            finish()
+            navigateToResults()
         }
     }
 
@@ -116,5 +143,10 @@ class QuestionActivity : AppCompatActivity() {
             findViewById(R.id.answer3),
             findViewById(R.id.answer4)
         )
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        timer?.cancel() // Asegúrate de cancelar el temporizador al destruir la actividad
     }
 }

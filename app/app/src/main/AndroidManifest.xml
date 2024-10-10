@@ -19,10 +19,10 @@
         </activity>
 
         <activity android:name=".QuestionActivity"
-            android:exported="false" />
+            android:exported="true" />
 
         <activity android:name=".ResultActivity"
-            android:exported="false" />
+            android:exported="true" />
     </application>
 
 </manifest>

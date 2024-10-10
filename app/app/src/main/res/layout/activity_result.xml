@@ -7,18 +7,28 @@
         android:id="@+id/resultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:text="Has acertado X de 11 preguntas"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resultText"
+        android:layout_centerHorizontal="true"
+        android:text="Tiempo total: 0 s"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
 
     <Button
         android:id="@+id/restartButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Volver a Jugar"
-        android:layout_below="@id/resultText"
+        android:layout_below="@id/timeText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp" />
 </RelativeLayout>
