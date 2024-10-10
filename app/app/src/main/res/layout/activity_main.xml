@@ -4,22 +4,41 @@
     android:padding="16dp">
 
     <!-- Título centrado en la parte superior, con margen inferior ajustado -->
-    <TextView
-        android:id="@+id/titleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="QUIZ MARCAS"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="80dp" /> <!-- Aumenta el margen inferior para bajarlo más -->
+    <!-- Aumenta el margen inferior para bajarlo más -->
 
     <!-- Botón centrado en el medio de la pantalla -->
-    <Button
-        android:id="@+id/startButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Iniciar Juego"
-        android:layout_centerInParent="true" /> <!-- Centra el botón en el medio -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="215dp" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            android:text="QUIZ MARCAS"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="52dp" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Iniciar Juego" />
+    </LinearLayout>
+
+    <!-- Centra el botón en el medio -->
 
 </RelativeLayout>
