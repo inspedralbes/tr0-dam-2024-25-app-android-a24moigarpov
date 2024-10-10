@@ -3,10 +3,23 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
+    <!-- Título centrado en la parte superior -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUIZ MARCAS"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Botón centrado en el medio de la pantalla -->
     <Button
         android:id="@+id/startButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Iniciar Juego"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true" /> <!-- Centra el botón en el medio -->
+
 </RelativeLayout>
