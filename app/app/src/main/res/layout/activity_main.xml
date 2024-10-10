@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Título centrado en la parte superior -->
+    <!-- Título centrado en la parte superior, con margen inferior ajustado -->
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
@@ -12,7 +12,7 @@
         android:textSize="32sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp" />
+        android:layout_marginBottom="80dp" /> <!-- Aumenta el margen inferior para bajarlo más -->
 
     <!-- Botón centrado en el medio de la pantalla -->
     <Button
